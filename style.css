@@ -1,0 +1,426 @@
+
+html {
+  scroll-padding-top: 250px;
+  scroll-behavior: smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f8f8;
+  padding-top: 60px;
+}
+
+header{
+  width: 100%;
+  background:#594476;
+  color: #fff;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+/* Navbar styles */
+.nav-link {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-link li {
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.nav-link a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: background 0.2s;
+}
+.nav-link a:hover {
+  background:#3c314c;
+  border-radius: 4px;
+}
+
+.logo{
+  font-size: 24px;
+}
+
+.hero{
+  width: 100%;
+  height: 100vh;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #060218;
+  text-align: center;
+  padding: 140px 0;
+  margin-bottom: 20px;
+  background: url("imagehero.jpg") no-repeat center center/cover;
+
+}
+.hero h2{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.search-box{
+  max-width: 550px;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3f3e48;
+}
+
+.search-box input{
+  width: 70%;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+.search-box button{
+  padding: 10px 20px;
+  outline: none;
+  border: 0;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 1rem;
+  background: #454571;
+  color: #fff;
+  cursor: pointer;
+}
+
+.about-section {
+    background: #f4f4f7;
+    padding: 80px 0;
+}
+
+.about-content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text h2 {
+  color: #243a9a;
+  margin-bottom: 18px;
+
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.about-photo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-photo img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0%;
+  border: 4px solid hsl(0, 91%, 9%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+}
+
+
+@media (max-width: 768px) {
+    .about-content-container {
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 24px;
+    }
+    .about-section {
+        padding: 40px 0;
+    }
+    .about-photo img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+.recipes {
+  background-color: #f4f4f7;
+  padding-top: 40px;       
+  padding-bottom: 40px;
+  border-top: 1px solid #f4f4f7; 
+}
+
+
+.recipes h1{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.recipe-section{
+  background-color: #f4f4f7;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+}
+
+.recipe-card{
+  background: #fff;
+  margin: 30px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.recipe-card img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.recipe-card h2{
+  font-size: 15px;
+  padding: 10px;
+}
+
+.recipe-card p{
+  font-size: 18px;
+  padding: 20px;
+}
+
+.recipe-card a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #333;
+  color: #fff;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+footer{
+  background: #3c314c;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.menu-icon{
+  font-size: 24px;
+  padding: 20px;
+  text-align: right;
+  cursor: pointer;
+  display: block;
+}
+
+/*.............Media Query.............*/
+
+@media only screen and (min-width:768px){
+  .menu-icon{
+    display: none;
+  }
+}
+@media only screen and (max-width:768px){
+  .hero h2{
+    font-size: 28px;
+  }
+  .hero p{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    display: none;
+    flex-direction: column;
+    background: #222121;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    z-index: 1001;
+  }
+  .nav-link.active {
+    display: flex;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-link {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    width: auto;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* ...existing code... */
+
+.contact-section {
+  max-width: 600px;
+  margin: 60px auto 40px auto;
+  background: #ececf5;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+
+.contact-section h2 {
+  color: #60577e;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  background:#60577e;
+  color: #e7e7ee;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: #60577e;
+}
+
+.contact-info {
+  text-align: center;
+  color: #333;
+}
+
+.contact-info a {
+  color: #60577e;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for contact section */
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 18px 6px;
+  }
+}
+
+.contact-message {
+  text-align: center;
+  color: #444;
+  margin-bottom: 18px;
+  font-size: 1.08rem;
+}
+/* In style.css, at the end of the file */
+
+/* --- Styles for Search Suggestions --- */
+
+/* This helps position the suggestions box relative to the search form */
+.hero-section {
+  position: relative;
+}
+
+.suggestions-container {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 4px 8px rgba(191, 190, 190, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+  /* Hide it by default */
+  display: none; 
+}
+
+.suggestion-item {
+  padding: 12px 20px;
+  color: #333;
+  cursor: pointer;
+  border-top: 1px solid #eee;
+}
+
+.suggestion-item:hover {
+  background-color: #f5f5f5;
+}
+
+
+
+
